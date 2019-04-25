@@ -1,0 +1,21 @@
+/*
+  You can use import statements to include partials:
+ */
+// @import 'imports/reset.css';
+@import '~sanitize.css';
+
+/*
+  Or add your statements here:
+ */
+ 
+body {
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  padding: 0 32px;
+}

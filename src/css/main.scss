@@ -1,13 +1,19 @@
 /*
   You can use import statements to include partials:
  */
-// @import 'imports/reset.css';
-@import '~sanitize.css';
+
+// Bootstrap variable overrides
+// See https://getbootstrap.com/docs/4.1/getting-started/theming/
+$body-bg: #000;
+$body-color: #FFF;
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
 
 /*
   Or add your statements here:
  */
- 
+
 body {
   
 }

@@ -4,8 +4,8 @@
 
 // Bootstrap variable overrides
 // See https://getbootstrap.com/docs/4.1/getting-started/theming/
-$body-bg: #000;
-$body-color: #FFF;
+$body-bg: #FFF;
+$body-color: #212529;
 
 // Import Bootstrap
 @import "~bootstrap/scss/bootstrap";
@@ -14,14 +14,24 @@ $body-color: #FFF;
   Or add your statements here:
  */
 
+// Thanks to
+// https://getbootstrap.com/docs/4.1/examples/navbar-fixed/
 body {
-  
+  min-height: 15rem;
+  padding-top: 4.5rem;
 }
 
-a {
-  text-decoration: none;
+// Override text container
+.container {
+  max-width: 60rem;
 }
 
 .content {
   padding: 0 32px;
+}
+
+footer {
+  border-top: .05rem solid #e5e5e5;
+  padding: 0.5rem 0;
+  margin-top: 1.5rem;
 }

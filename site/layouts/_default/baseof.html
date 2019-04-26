@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
   <title>{{ $.Site.Title }}</title>
 
@@ -17,7 +17,9 @@
 
   {{ block "header" . }}{{ partial "header" . }}{{end}}
 
+  <main role="main" class="container">
   {{ block "main" . }}{{end}}
+  </main>
 
   {{ block "footer" . }}{{ partial "footer" . }}{{end}}
 

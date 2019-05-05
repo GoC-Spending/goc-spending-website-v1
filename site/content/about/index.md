@@ -2,6 +2,9 @@
 title: 'About'
 date: 2019-05-04
 draft: false
+menu: 
+  main:
+    parent: 'about'
 ---
 
 # About this project

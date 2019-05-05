@@ -2,6 +2,9 @@
 title: 'Download the data'
 date: 2019-05-04
 draft: false
+menu: 
+  main:
+    parent: 'data'
 ---
 
 # Download government contract spending data

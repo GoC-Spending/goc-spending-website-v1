@@ -5,21 +5,13 @@
   </button>
   <div class="navbar-collapse collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/methodology">Methodology</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/analysis">Analysis</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/download">Data</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about">About</a>
-      </li>
+
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <li class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+          <a class="nav-link" title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} <span class="sr-only">(current)</span>{{end}}</a>
+        </li>
+        {{ end }}
     </ul>
   </div>
 </nav>

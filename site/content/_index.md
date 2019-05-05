@@ -2,6 +2,9 @@
 title: 'Home'
 date: 2019-05-04
 draft: false
+menu: 
+  main:
+    parent: 'home'
 ---
 
 # Analyzing GoC Contract Spending

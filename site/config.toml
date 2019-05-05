@@ -7,3 +7,34 @@ title = "Analyzing GoC Contract Spending"
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    identifier = "home"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Methodology"
+    identifier = "methodology"
+    url = "/methodology/"
+    weight = 20
+
+  [[menu.main]]
+    name = "Analysis"
+    identifier = "analysis"
+    url = "/analysis/"
+    weight = 30
+
+  [[menu.main]]
+    name = "Data"
+    identifier = "data"
+    url = "/download/"
+    weight = 40
+
+  [[menu.main]]
+    name = "About"
+    identifier = "about"
+    url = "/about/"
+    weight = 50

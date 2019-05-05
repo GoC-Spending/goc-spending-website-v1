@@ -6,6 +6,8 @@
 // See https://getbootstrap.com/docs/4.1/getting-started/theming/
 $body-bg: #FFF;
 $body-color: #212529;
+$headings-margin-bottom: 1.5rem;
+$paragraph-margin-bottom: 1.5rem;
 
 // Import Bootstrap
 @import "~bootstrap/scss/bootstrap";
@@ -18,17 +20,30 @@ $body-color: #212529;
 // https://getbootstrap.com/docs/4.1/examples/navbar-fixed/
 body {
   min-height: 15rem;
-  padding-top: 4.5rem;
+  padding-top: 5rem;
 }
 
 // Override text container
 .container {
-  max-width: 60rem;
+  max-width: 49rem;
 }
 
-.content {
-  padding: 0 32px;
+main {
+  // Set the list margin-bottom values to the same as paragraphs:
+  ol, ul, dl {
+    margin-bottom: $paragraph-margin-bottom;
+  }
+
+  // Set list item margins for readability:
+  li {
+    margin-bottom: ($paragraph-margin-bottom / 2);
+  }
+
+  li ul:first-child {
+    margin-top: ($paragraph-margin-bottom / 2);
+  }
 }
+
 
 footer {
   border-top: .05rem solid #e5e5e5;

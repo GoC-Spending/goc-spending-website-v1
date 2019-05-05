@@ -6,7 +6,17 @@
 // and thanks to
 // https://github.com/webpack/webpack/issues/4258#issuecomment-279133995
 import $ from "jquery";
-import "bootstrap";
+
+// == Import all Bootstrap JS ==
+// import "bootstrap";
+
+// == Or, selectively import specific components ==
+// Thanks to
+// https://getbootstrap.com/docs/4.1/getting-started/webpack/
+import "bootstrap/js/dist/util";
+import "bootstrap/js/dist/collapse";
+import "bootstrap/js/dist/dropdown";
+
 import Chart from "chart.js";
 
 // Styles

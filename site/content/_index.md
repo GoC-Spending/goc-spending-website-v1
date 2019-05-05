@@ -17,7 +17,7 @@ Although departments have published contracting data for more than a decade, the
 
 Since 2016, departments have begun [publishing contracting data on the Open Government website](https://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b) in a government-wide CSV dataset. This dataset is much easier to analyze, but does not include historical data for most departments.
 
-In order to build a government-wide, historical dataset of Government of Canada contract spending, volunteers from Ottawa Civic Tech built [a collection of website scrapers and other analysis tools](https://github.com/GoC-Spending/). These tools collected data from %totalIncludedDepartments% departmental websites and the Open Government dataset, merged it together, detected duplicate entries, matched sets of contract amendments together, and calculated aggregate statistics.
+In order to build a government-wide, historical dataset of Government of Canada contract spending, volunteers from Ottawa Civic Tech built [a collection of website scrapers and other analysis tools](https://github.com/GoC-Spending/). These tools collected data from {{< vars totalIncludedDepartments >}} departments, merged it together, detected duplicate entries, matched sets of contract amendments together, and calculated aggregate statistics.
 
 [sample government-wide chart here, e.g. total contract/amendment entries by fiscal quarter]
 

@@ -8,6 +8,8 @@ title = "Analyzing GoC Contract Spending"
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
+enableInlineShortcodes = true
+
 [menu]
   [[menu.main]]
     name = "Home"

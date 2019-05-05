@@ -29,7 +29,7 @@ This table includes the data from the “source” table, minus the duplicate an
 
 ### “By year” table
 
-This table is generated from the “export” table, and includes separate entries for each effective year (based on the [year normalization](/methodology) method). Of the downloads listed, this table is the easiest way to do year-by-year analyses, based on the methodology used here.
+This table is generated from the “export” table, and includes separate entries for each effective year (based on the [normalizing by year](/methodology#normalizing-by-year) method). Of the downloads listed, this table is the easiest way to do year-by-year analyses, based on the methodology used here.
 
 ## Original source data
 
@@ -37,13 +37,13 @@ This table is generated from the “export” table, and includes separate entri
 
 You can download the scraped HTML excerpts, or the parsed JSON files [generated from these excerpts](/methodology) from the [goc-spending-data archive repository](https://github.com/GoC-Spending/goc-spending-data) on GitHub. 
 
-This repository includes data from %totalNumberOfWebScrapers% Proactive Disclosure websites, %numberOfWebsitesNowOffline% of which are no longer available online. 
+This repository includes data from {{< vars totalScrapedProactiveDisclosureDepartments >}} Proactive Disclosure websites, {{< vars numberOfWebsitesNowOffline >}} of which are no longer available online. 
 
 ### Open Government dataset
 
-The [Proactive Disclosure of Contracts dataset](https://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b) can be downloaded from the Open Government website. It is updated on a regular basis as new departmental data is added, even though the “Record Modified” metadata indicates that it was last modified on%openGovernmentDatasetRecordModifiedDate%.
+The [Proactive Disclosure of Contracts dataset](https://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b) can be downloaded from the Open Government website. It is updated on a regular basis as new departmental data is added, even though the “Record Modified” metadata indicates that it was last modified on {{< vars openGovernmentDatasetRecordModifiedDate >}}.
 
-The version of the Open Government dataset used to generate the combined dataset tables above is from %openGovernmentDatasetPointInTimeDate%. The [archived point-in-time version can be downloaded here].
+The version of the Open Government dataset used to generate the combined dataset tables above is from {{< vars openGovernmentDatasetPointInTimeDate >}}. The [archived point-in-time version can be downloaded here].
 
 ## Share your feedback!
 

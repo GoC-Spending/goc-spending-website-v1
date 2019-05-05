@@ -30,7 +30,9 @@ The contract value indicates the amount of money that the government **commits**
 
 In many cases, these webpages would also include an original value for the contract, if it was different than the total or final value, or the additional value of the most recent amendment to it. Many of the webpages also included comments describing if the contract was (for example) sole-sourced, part of a standing offer list, or a correction to a previous contract entry. These comments were freeform text and weren’t written consistently from one entry to the next.
 
-Although the structure of these webpages was similar from one department to the next, they were each created separately by each department. As a result, the HTML code of each proactive disclosure website was different enough that individual web scrapers had to be created for each department. %totalNumberOfWebScrapers% different web scrapers were created and used to retrieve departmental proactive disclosure website data.
+Although the structure of these webpages was similar from one department to the next, they were each created separately by each department. As a result, the HTML code of each proactive disclosure website was different enough that individual web scrapers had to be created for each department. {{< vars totalScrapedProactiveDisclosureDepartments >}} different web scrapers were created and used to retrieve departmental proactive disclosure website data.
+
+
 
 ### Open Government dataset
 
@@ -42,21 +44,21 @@ However, for most departments, this dataset only includes contract data going ba
 
 As a result, neither the Open Government dataset nor the individual departmental proactive disclosure websites provided a full historical overview of contract spending. This project was an effort to bring these together into a single, historically comprehensive dataset.
 
-A number of departments have taken their proactive disclosure websites offline since 2017 when this project began. For these departments, the [scraped data collected for this project](https://github.com/GoC-Spending/goc-spending-data) is likely the only publicly-available source of this data.
+At least {{< vars numberOfWebsitesNowOffline >}} departments have taken their proactive disclosure websites offline since 2017 when this project began. For these departments, the [scraped data collected for this project](https://github.com/GoC-Spending/goc-spending-data) is likely the only publicly-available source of this data.
 
-The Open Government dataset [can be downloaded here from open.canada.ca](https://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b). The point-in-time copy used for the aggregate trend analysis (from %openGovernmentDatasetPointInTimeDate%) is archived [here]. You can [download the combined dataset](/download) to conduct further analyses on your own.
+The Open Government dataset [can be downloaded here from open.canada.ca](https://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b). The point-in-time copy used for the aggregate trend analysis (from {{< vars openGovernmentDatasetPointInTimeDate >}}) is archived [here]. You can [download the combined dataset](/download) to conduct further analyses on your own.
 
 ## Limitations and assumptions
 
 ### Limited departmental scope
 
-The combined dataset includes data from publicly-available Proactive Disclosure websites, and from the Open Government dataset. Data from %totalScrapedProactiveDisclosureDepartments% departments’ Proactive Disclosure websites was included, along with %totalOpenGovernmentDatasetDepartments% departments that contributed data to the Open Government dataset.
+The combined dataset includes data from {{< vars totalScrapedProactiveDisclosureDepartments >}} departments’ publicly-available Proactive Disclosure websites, and from {{< vars totalOpenGovernmentDatasetDepartments >}} departments or agencies represented in the Open Government dataset. 
 
-Combined, this represents %totalIncludedDepartments%, %percentCoverageOfDepartments% of the %totalPolicySubjectedDepartments% departments and agencies that are subject to government Proactive Disclosure of contracts policies. It does not include crown corporations or federal museums, the House of Commons or Senate, Officers of Parliament (except %officersParliamentExceptionsIncluded%), or security agencies.
+Combined, this represents {{< vars totalIncludedDepartments >}} departments, {{< vars percentCoverageOfDepartments >}} of the {{< vars totalPolicySubjectedDepartments >}} departments and agencies that are subject to government Proactive Disclosure of contracts policies. It does not include crown corporations or federal museums, the House of Commons or Senate, or security agencies.
 
 ### Limited historical data
 
-The time range of historical data varied from one department to another. Proactive Disclosure websites went back as far as 2005 for some departments, or only as far back as 2012 for others. Data from the Open Government dataset typically only went back as far as 2016 (with some notable exceptions, including DND, GAC, and %toReview% which provided comprehensive historical data). 
+The time range of historical data varied from one department to another. Proactive Disclosure websites went back as far as 2005 for some departments, or only as far back as 2012 for others. Data from the Open Government dataset typically only went back as far as 2015 or 2016 (with some notable exceptions, including CEAA, DND, ECCC, ESDC, GAC, PCH, PSC, and CRA which provided comprehensive historical data going back to 2004 within the Open Government dataset). 
 
 One consequence of this is that year-by-year trends are likely to show an exaggerated increase in contract spending over time. The perceived increase would be caused in part by more complete data as the year gets closer to the present.
 
@@ -64,7 +66,7 @@ Many of the largest departments (for example, PSPC and DND) include data as far 
 
 ### Inconsistent date formats
 
-In both data sources, formatting for dates was highly inconsistent (despite a federal standard requiring the ISO 8601 date format). Some departments used YYYY-MM-DD; others used YYYY-DD-MM; others used MM/DD/YYYY. Departments occasionally used different date formats from one contract entry to the next, or from one date field to the next of the same contract.
+In both data sources, formatting for dates was highly inconsistent (despite a [federal standard requiring the ISO 8601 date format](https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=17284)). Some departments used `YYYY-MM-DD`; others used `YYYY-DD-MM`; others used `MM/DD/YYYY` or spelled out months in words. Departments occasionally used different date formats from one contract entry to the next, or from one date field to the next of the same contract entry.
 
 In other cases, contract entries included more problematic dates. For example:
 
@@ -80,9 +82,11 @@ In other cases, contract entries included more problematic dates. For example:
 
 For many date entries, distinguishing months and days was not possible. The year was the most consistently-identifiable date (any four-digit number beginning with 19 or 20). As a result, start and end calendar years became the most reliable date available from contract entries. 
 
-This differs, however, from Government of Canada financial systems that use an April to March fiscal year. As a result, comparing this data (aggregated by calendar year) to other government financial records (aggregated by fiscal year) is difficult.
+This differs, however, from Government of Canada financial systems that use an April 1 to March 31 fiscal year. As a result, comparing this data (aggregated by calendar year) to other government financial records (aggregated by fiscal year) is difficult.
 
-Up to 2016, the Treasury Board Secretariat published [Purchasing Activity Reports](https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data.html) that detailed government spending by calendar year. The [2016 Purchasing Activity Report](https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data/2016-purchasing-activity-report.html) states a total of $18.2B in contract spending that year ($17B for contracts $25k and above, and $1.2B for contracts under $25k). This is comparable to %total2016ContractSpending% in total 2016 contract spending included in the combined dataset, which provides a useful gut-check. 
+Up to 2016, the Treasury Board Secretariat published [Purchasing Activity Reports](https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data.html) that detailed government spending by calendar year. 
+
+The [2016 Purchasing Activity Report](https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data/2016-purchasing-activity-report.html) states a total of $18.2B in contract spending that year ($17B for contracts $25k and above, and $1.2B for contracts under $25k). This is comparable to %total2016ContractSpending% in total 2016 contract spending included in the combined dataset, which provides a useful gut-check. 
 
 ### Linearized year-to-year effective spending
 
@@ -98,7 +102,7 @@ For contracts with amendments, the year-by-year rate was calculated separately f
 
 ### Scraping and parsing proactive disclosure HTML
 
-Custom [web scrapers for each department](https://github.com/GoC-Spending/goc-spending-laravel/tree/master/app/DepartmentHandlers) were written in PHP, using the Guzzle and [xpath-selector](https://github.com/stil/xpath-selector) libraries.
+Custom [web scrapers for each department](https://github.com/GoC-Spending/goc-spending-laravel/tree/master/app/DepartmentHandlers) were written in PHP, using the [Guzzle](https://github.com/guzzle/guzzle) and [xpath-selector](https://github.com/stil/xpath-selector) libraries.
 
 In most cases, departments used a very similar model for the structure of their Proactive Disclosure websites: a top-level index page listing fiscal quarters; a page for each fiscal quarter listing all the contracts from that time period; and a page for each contract with the complete contract details (described above).
 
@@ -114,7 +118,7 @@ Scraping and saving the contract pages’ HTML was done separately from parsing 
 
 The saved HTML pages were parsed using Xpath selectors, to identify specific table cells and rows for each section (contract name, total value, delivery date, etc.). These were usually quite similar from one department to the next, but differed enough that separate parser functions or parameters were also needed each time. 
 
-The parsed data was then stored in individual, consistently-structured JSON files for each contract page ([available on GitHub here]). Scraping an average department would result in thousands of JSON files, one for each contract or amendment. These were kept in separate, small files in order to avoid triggering the GitHub file size limit of 100MB. 
+The parsed data was then stored in individual, consistently-structured JSON files for each contract page ([available on GitHub here](https://github.com/GoC-Spending/goc-spending-data)). Scraping an average department would result in thousands of JSON files, one for each contract or amendment. These were kept in separate, small files in order to avoid triggering the GitHub file size limit of 100MB. 
 
 Finally, these JSON files were imported into a PostgreSQL database (via Laravel’s database functions) in order to be more easily analyzed, searched, and aggregated.
 
@@ -142,7 +146,7 @@ The contracting data from both sources only provided a free-text vendor name fie
 
 Normalizing vendor names included two steps. Vendor names were first “cleaned” to remove punctuation and special characters, as well as [any known legal suffixes](https://github.com/GoC-Spending/goc-spending-laravel/blob/master/app/VendorData.php#L17). 
 
-Then, vendor names were manually matched together with their “parent” company, in a large matching table. This [vendor matching table is available as a CSV file](https://github.com/GoC-Spending/goc-spending-vendors/blob/master/vendor_data.csv) and includes %vendorMatchingTableRows% rows. It includes matching entries for the largest several hundred companies in the combined dataset, based on an early aggregate analysis of the data.
+Then, vendor names were manually matched together with their “parent” company, in a large matching table. **This [vendor matching table is available as a CSV file](https://github.com/GoC-Spending/goc-spending-vendors/blob/master/vendor_data.csv) and includes {{< vars vendorMatchingTableRows >}} rows.** It includes matching entries for the largest several hundred companies in the combined dataset, based on an early aggregate analysis of the data.
 
 Because this matching was done by hand (looking up company names with similar keywords or character sequences in the database), it has a number of important limitations:
 
@@ -183,7 +187,7 @@ Given that the duplicate detection relied heavily on having the same contract va
 
 The source data did not have a consistent way of identifying amendments and linking them to their original contracts. In many (but not all cases), a free-text note in the “comments” field was included describing an entry as an amendment to a previous contract. These comments typically did not include more details or identifiers that would help users find the original contract, and were not in a machine-readable format.
 
-Contract and amendment entries almost always included a reference number, which was the most promising method for linking amendments to each other and to the original contract entry. The amendment finding function found entries with the same normalized vendor name, the same reference number, the same start year, and a different contract value. It excluded entries that had been marked as duplicates by the methods above, as well as any entries flagged by the [basic error detection] functions.
+Contract and amendment entries almost always included a reference number, which was the most promising method for linking amendments to each other and to the original contract entry. The amendment finding function found entries with the same normalized vendor name, the same reference number, the same start year, and a different contract value. It excluded entries that had been marked as duplicates by the methods above, as well as any entries flagged by the [basic error detection](#basic-error-detection) functions.
 
 This process grouped related contract and amendments together using an “amendment group ID”, that could then be used to determine changes to the same contract over time. 
 
@@ -195,7 +199,7 @@ The amendment finding function restricted itself to one department at a time (to
 
 Once contract and amendment entries were grouped together, it was possible to determine normalized per-year values over the lifetime of a contract. 
 
-For contracts without amendments, this was straightforward: take the total value of the contract and divide it by the number of years it was in effect, to determine the value per year. (Because these contracts were [linearized by year](/limitations), they should be considered estimates rather than precise values.) For contracts that only spanned a single year, the per-year value is the same as the total value.
+For contracts without amendments, this was straightforward: take the total value of the contract and divide it by the number of years it was in effect, to determine the value per year. (Because these contracts were [linearized by year](#linearized-year-to-year-effective-spending), they should be considered estimates rather than precise values.) For contracts that only spanned a single year, the per-year value is the same as the total value.
 
 For contracts with amendments, the following steps were used:
 
@@ -259,7 +263,7 @@ As the example shows, if the time range of a contract is extended (by a subseque
 
 With amendment entries grouped together and effective yearly values calculated, it’s possible to produce aggregate totals on a per-year basis across, for example, a given department, a given company, or the government as a whole.
 
-Given the [limited historical coverage] of the data, these per-year trends become less accurate further back in time. One consequence of this is that the total effective values (e.g. total contract spending on a government-wide level) appear to increase more significantly than they do in practice, because the coverage of the data improves over time (namely, including data from more departments). For the [aggregated statistics](/analysis) included here, a time range from 2008 to 2017 was chosen. 
+Given the [limited historical coverage](#limited-historical-data) of the data, these per-year trends become less accurate further back in time. One consequence of this is that the total effective values (e.g. total contract spending on a government-wide level) appear to increase more significantly than they do in practice, because the coverage of the data improves over time (namely, including data from more departments). For the [aggregated statistics](/analysis) included here, a time range from 2008 to 2017 was chosen. 
 
 To make it easier to produce aggregate statistics, two additional database tables were created and populated from the “source” table that contained the combined dataset:
 
@@ -273,7 +277,7 @@ Aggregate statistics were produced using simple SQL queries on these database ta
 - Statistics on the total number of contract or amendment entries were calculated from the “source” table. 
 - Statistics on total effective (monetary) values over time were calculated from the “by year” table.
 
-Results from the “by year” table on the largest overall vendors were used to improve the [vendor normalization table], over several iterations.
+Results from the “by year” table on the largest overall vendors were used to improve the [vendor normalization table](#vendor-name-normalization), over several iterations.
 
 A [class of analysis functions](https://github.com/GoC-Spending/goc-spending-laravel/blob/master/app/AnalysisOps.php) was used to perform database queries and export the results as CSV files. The [resulting analysis CSV files](https://github.com/GoC-Spending/goc-spending-analysis) are available on GitHub. These same queries are used to produce the charts on the [Analysis](/analysis) page.
 
@@ -281,7 +285,7 @@ A [class of analysis functions](https://github.com/GoC-Spending/goc-spending-lar
 
 ### Natural language processing to normalize vendor names
 
-The vendor normalization table was [created manually], and based on the largest vendors in the dataset. There are %uniqueVendorNamesInCombinedDataset% unique vendor name entries in the combined dataset, and only %vendorMatchingTableRows% normalization entries included in the vendor normalization table. Natural language processing tools could be used to more effectively group together these entries, which would improve the aggregate statistics for the “long tail” of smaller vendors in particular.
+The vendor normalization table was [created manually](#vendor-name-normalization), and based on the largest vendors in the dataset. There are {{< vars uniqueVendorNamesInCombinedDataset >}} unique vendor name entries in the combined dataset, and only {{< vars vendorMatchingTableRows >}} normalization entries included in the vendor normalization table. Natural language processing tools could be used to more effectively group together these entries, which would improve the aggregate statistics for the “long tail” of smaller vendors in particular.
 
 ### Automatic determination of vendor industry
 
@@ -305,7 +309,7 @@ This would allow for aggregate statistics that map to government fiscal years, r
 
 ### Better programming languages for data analysis
 
-The bulk of the [scraping, parsing, and analysis code](https://github.com/GoC-Spending/goc-spending-laravel) for this project was written in [PHP]. 
+The bulk of the [scraping, parsing, and analysis code](https://github.com/GoC-Spending/goc-spending-laravel) for this project was written in [PHP](https://php.net/) using [Laravel](https://laravel.com/). 
 
 Data science practitioners tend to use [Python](https://www.python.org/) or [R](https://www.r-project.org/) for similar projects, which provide access to a wide range of useful open-source data science tools. You can find some useful introductory resources here:
 

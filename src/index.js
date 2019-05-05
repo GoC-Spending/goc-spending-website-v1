@@ -91,6 +91,7 @@ app.options.timeStackedEntries = {
   }
 };
 
+// Stacked time-series chart, with currency units
 app.options.timeStackedCurrency = {
   layout: app.options._layout,
   legend: {
@@ -161,6 +162,7 @@ app.options.timeSingleCurrency = {
 
 app.buildYearStackedChart = function(id) {
   var ctx = $("#" + id);
+  var optionsKey = $(ctx).data("chartOptions") || "timeStackedEntries";
   console.log($(ctx).data("chartValues"));
 
   if (ctx !== null) {
@@ -170,7 +172,7 @@ app.buildYearStackedChart = function(id) {
         labels: $(ctx).data("chartRange"),
         datasets: $(ctx).data("chartValues")
       },
-      options: app.options.timeStackedEntries
+      options: app.options[optionsKey]
     });
   }
 };
@@ -209,55 +211,55 @@ $(function() {
     console.log(index + ": " + $(this).text());
   });
 
-  app.buildYearStackedChart("general-entries-by-year");
+  $("canvas[data-chart-type=year-stacked").each(function(index) {
+    console.log("Building " + $(this).attr("id"));
+    app.buildYearStackedChart($(this).attr("id"));
+  });
+
   app.buildYearSingleChart(
     "general-effective-overall-total-by-year-2008-to-2017"
   );
 
-  /*
-  var a1 = "#general-effective-overall-total-by-year-2008-to-2017";
-  var ctx = $(a1);
-
-  console.log("test");
-  console.log($(ctx).data("chartValues"));
-
-  app.charts[a1] = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: $(ctx).data("chartRange"),
-      datasets: [
-        {
-          // label: "# of Votes",
-          data: $(ctx).data("chartValues"),
-          // backgroundColor: [
-          //   "rgba(255, 99, 132, 0.2)",
-          //   "rgba(54, 162, 235, 0.2)",
-          //   "rgba(255, 206, 86, 0.2)",
-          //   "rgba(75, 192, 192, 0.2)",
-          //   "rgba(153, 102, 255, 0.2)",
-          //   "rgba(255, 159, 64, 0.2)"
-          // ],
-          // borderColor: [
-          //   "rgba(255, 99, 132, 1)",
-          //   "rgba(54, 162, 235, 1)",
-          //   "rgba(255, 206, 86, 1)",
-          //   "rgba(75, 192, 192, 1)",
-          //   "rgba(153, 102, 255, 1)",
-          //   "rgba(255, 159, 64, 1)"
-          // ],
-          backgroundColor: Chart.helpers
-            .color("#11A579")
-            .alpha(0.7)
-            .rgbString(),
-          borderColor: Chart.helpers.color("#11A579").rgbString(),
-          borderWidth: 1
-        }
-      ]
-    },
-    options: app.options.timeStackedCurrency
-  });
-
-  */
-
   console.log(app.charts);
+
+  var colors = [
+    "#ff0000",
+    "#ff4d00",
+    "#ff9900",
+    "#ffe600",
+    "#ccff00",
+    "#80ff00",
+    "#33ff00",
+    "#00ff19",
+    "#00ff66",
+    "#00ffb2",
+    "#00ffff",
+    "#00b3ff",
+    "#0066ff",
+    "#0019ff",
+    "#3300ff",
+    "#8000ff",
+    "#cc00ff",
+    "#ff00e5",
+    "#ff0099",
+    "#ff004c"
+  ];
+
+  var colorMap = [];
+  $.each(colors, function(index, value) {
+    var item = {};
+    // console.log(value);
+
+    item.color = Chart.helpers
+      .color(value)
+      // .alpha(0.7)
+      .rgbString();
+    item.borderColor = Chart.helpers
+      .color(value)
+      .darken(0.2)
+      .rgbString();
+    // console.log(item);
+    colorMap.push(item);
+  });
+  console.log(JSON.stringify(colorMap));
 });

@@ -221,6 +221,47 @@ $(function() {
     console.log(index + ": " + $(this).text());
   });
 
+  // Handle the department select options:
+  $("select#owner-select").change(function() {
+    var ownerAcronym = $(this).val();
+    var ownerLabel = $("option:selected", this).text();
+    var chartArray = $("option:selected", this).data("chartArray");
+
+    $(".update-owner").text(ownerLabel);
+
+    console.log("here");
+    $.each(chartArray, function(index, item) {
+      var ctx = $("#" + item.id);
+      console.log(item);
+
+      console.log(ctx);
+      // Check if the canvas element exists
+      if (typeof ctx !== undefined) {
+        // Check if it's already initialized
+        if ($(ctx).data("chartInitialized") == 1) {
+          // Just updated data
+          console.log("Already initalized!");
+          console.log(app.charts[item.id]);
+          console.log(item.values);
+
+          app.charts[item.id].data = {
+            labels: item.range,
+            datasets: item.values
+          };
+          app.charts[item.id].update();
+        } else {
+          $(ctx).data("chartValues", item.values);
+          $(ctx).data("chartRange", item.range);
+          $(ctx).data("chartType", item.type);
+          $(ctx).data("chartOptions", item.options);
+          $(ctx).data("chartInitialized", 1);
+
+          app.buildYearStackedChart(item.id);
+        }
+      }
+    });
+  });
+
   $("canvas[data-chart-type=year-stacked").each(function(index) {
     console.log("Building " + $(this).attr("id"));
     app.buildYearStackedChart($(this).attr("id"));

@@ -215,11 +215,44 @@ app.buildYearSingleChart = function(id) {
   }
 };
 
+app.updateExistingChartArray = function(chartArray) {
+  $.each(chartArray, function(index, item) {
+    var ctx = $("#" + item.id);
+    // console.log(item);
+    // console.log(ctx);
+
+    // Check if the canvas element exists
+    if (typeof ctx !== undefined) {
+      // Check if it's already initialized
+      if ($(ctx).data("chartInitialized") == 1) {
+        // Just updated data
+        // console.log("Already initalized!");
+        // console.log(app.charts[item.id]);
+        // console.log(item.values);
+
+        app.charts[item.id].data = {
+          labels: item.range,
+          datasets: item.values
+        };
+        app.charts[item.id].update();
+      } else {
+        $(ctx).data("chartValues", item.values);
+        $(ctx).data("chartRange", item.range);
+        $(ctx).data("chartType", item.type);
+        $(ctx).data("chartOptions", item.options);
+        $(ctx).data("chartInitialized", 1);
+
+        app.buildYearStackedChart(item.id);
+      }
+    }
+  });
+};
+
 // Sample jQuery function:
 $(function() {
-  $("a").each(function(index) {
-    console.log(index + ": " + $(this).text());
-  });
+  // $("a").each(function(index) {
+  //   console.log(index + ": " + $(this).text());
+  // });
 
   // Handle the department select options:
   $("select#owner-select").change(function() {
@@ -229,37 +262,18 @@ $(function() {
 
     $(".update-owner").text(ownerLabel);
 
-    console.log("here");
-    $.each(chartArray, function(index, item) {
-      var ctx = $("#" + item.id);
-      console.log(item);
+    app.updateExistingChartArray(chartArray);
+  });
 
-      console.log(ctx);
-      // Check if the canvas element exists
-      if (typeof ctx !== undefined) {
-        // Check if it's already initialized
-        if ($(ctx).data("chartInitialized") == 1) {
-          // Just updated data
-          console.log("Already initalized!");
-          console.log(app.charts[item.id]);
-          console.log(item.values);
+  // Handle the vendor select options:
+  $("select#vendor-select").change(function() {
+    var ownerAcronym = $(this).val();
+    var ownerLabel = $("option:selected", this).text();
+    var chartArray = $("option:selected", this).data("chartArray");
 
-          app.charts[item.id].data = {
-            labels: item.range,
-            datasets: item.values
-          };
-          app.charts[item.id].update();
-        } else {
-          $(ctx).data("chartValues", item.values);
-          $(ctx).data("chartRange", item.range);
-          $(ctx).data("chartType", item.type);
-          $(ctx).data("chartOptions", item.options);
-          $(ctx).data("chartInitialized", 1);
+    $(".update-vendor").text(ownerLabel);
 
-          app.buildYearStackedChart(item.id);
-        }
-      }
-    });
+    app.updateExistingChartArray(chartArray);
   });
 
   $("canvas[data-chart-type=year-stacked").each(function(index) {
@@ -271,7 +285,14 @@ $(function() {
     "general-effective-overall-total-by-year-2008-to-2017"
   );
 
-  console.log(app.charts);
+  // Set initial values for the dropdown menus
+  $("select#vendor-select")
+    .val("IBM CANADA")
+    .trigger("change");
+  // For the departmental dropdowns, start with PSPC since it's the largest:
+  $("select#owner-select")
+    .val("pspc")
+    .trigger("change");
 
   var colors = [
     "#ff0000",

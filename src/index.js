@@ -265,6 +265,8 @@ $(function() {
   // $("a").each(function(index) {
   //   console.log(index + ": " + $(this).text());
   // });
+  $("a[href^='http://']").attr("target", "_blank");
+  $("a[href^='https://']").attr("target", "_blank");
 
   // Handle the department select options:
   $("select#owner-select").change(function() {

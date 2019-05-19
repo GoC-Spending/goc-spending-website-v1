@@ -1,5 +1,6 @@
 ---
 title: 'Home'
+description: "This website is the first volunteer-led, public, historical analysis of Canadian federal government contract spending at a whole-of-government level."
 date: 2019-05-04
 draft: false
 menu: 

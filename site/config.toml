@@ -10,6 +10,8 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 enableInlineShortcodes = true
 
+googleAnalytics = "UA-140416206-1"
+
 [menu]
   [[menu.main]]
     name = "Home"

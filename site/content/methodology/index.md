@@ -1,5 +1,6 @@
 ---
 title: 'Methodology'
+description: "Data sources and methodology used to produce the combined dataset of Government of Canada contract spending and aggregate trend analyses."
 date: 2019-05-04
 draft: false
 menu: 

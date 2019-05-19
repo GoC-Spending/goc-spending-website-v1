@@ -1,5 +1,6 @@
 ---
 title: 'Download the data'
+description: "Download links for the combined dataset of Government of Canada contract spending, in CSV format."
 date: 2019-05-04
 draft: false
 menu: 

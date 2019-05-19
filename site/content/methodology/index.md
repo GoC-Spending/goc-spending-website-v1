@@ -11,13 +11,23 @@ menu:
 
 This [volunteer-led project](/about) began in 2017 as an effort to better understand federal government contract spending at a government-wide level. The page below describes the data sources and methodology used to produce the combined dataset as well as the aggregate trends displayed on the Analysis page.
 
+## Table of contents
+
+{{< toc >}}
+
 ## Data sources
 
 ### Proactive disclosure websites
 
 Data on federal government contract spending was sourced from each department’s [Proactive Disclosure](https://www.canada.ca/en/treasury-board-secretariat/services/reporting-government-spending/proactive-disclosure-department-agency.html) websites.
 
-These websites listed contracts and amendments by the fiscal quarter in which the contract or amendment was initiated. Information for a given contract or amendment was displayed on an individual webpage. These webpages would typically list:
+These websites listed contracts and amendments by the fiscal quarter in which the contract or amendment was initiated. Information for a given contract or amendment was displayed on an individual webpage. Examples of Proactive Disclosure websites include:
+
+- **Canadian Space Agency:** [Index page](#), [sample contract entry](#)
+- **Health Canada:** [Index page](#), [sample contract entry](#)
+- **National Defence:** [Index page](#), [sample contract entry](#)
+
+These webpages would typically list:
 
 - the name of the vendor
 - a reference number
@@ -25,6 +35,8 @@ These websites listed contracts and amendments by the fiscal quarter in which th
 - the contract period (start and end), or a delivery date
 - the total value of the contract
 - a description of what work was requested
+
+
 
 The contract value indicates the amount of money that the government **commits** to spending through the contract, rather than a transactional record of funds being spent at a given point in time. 
 
@@ -243,7 +255,7 @@ To calculate the effective contract value for each year, the steps below were us
 
 For the example above, the effective yearly values would be as follows:
 
-- 2005: #1. Yearly value: $2M ($10M over 2005-2009, 5 years).
+- 2005: #1. Yearly value: $2M ($10M, over 2005-2009 or 5 years).
 - 2006: #1. Yearly value: $2M.
 - 2007: #2. Yearly value: $1.2M ($10M minus the $4M cumulative - values above, over 2007-2011 or 5 years). 
 - 2008: #2. Yearly value: $1.2M.

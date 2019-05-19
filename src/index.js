@@ -23,7 +23,7 @@ import Chart from "chart.js";
 import "./css/main.scss";
 
 // Say hello
-console.log("🦊 Hello! Edit me in src/index.js");
+console.log("🦊 Hello! Powered by victor-hugo and Webpack.");
 
 var app = app || {};
 app.charts = app.charts || {};
@@ -173,7 +173,7 @@ app.options.timeSingleCurrency = {
 app.buildYearStackedChart = function(id) {
   var ctx = $("#" + id);
   var optionsKey = $(ctx).data("chartOptions") || "timeStackedEntries";
-  console.log($(ctx).data("chartValues"));
+  // console.log($(ctx).data("chartValues"));
 
   if (ctx !== null) {
     app.charts[id] = new Chart(ctx, {
@@ -189,7 +189,7 @@ app.buildYearStackedChart = function(id) {
 
 app.buildYearSingleChart = function(id) {
   var ctx = $("#" + id);
-  console.log($(ctx).data("chartValues"));
+  // console.log($(ctx).data("chartValues"));
 
   if (ctx !== null) {
     app.charts[id] = new Chart(ctx, {
@@ -248,6 +248,18 @@ app.updateExistingChartArray = function(chartArray) {
   });
 };
 
+app.updateSourceLinks = function(queryTarget, labelText, urlTarget) {
+  $(queryTarget).each(function() {
+    $(this).text(
+      $(this).data("labelPrefix") + labelText + $(this).data("labelSuffix")
+    );
+    $(this).attr(
+      "href",
+      $(this).data("urlPrefix") + urlTarget + $(this).data("urlSuffix")
+    );
+  });
+};
+
 // Sample jQuery function:
 $(function() {
   // $("a").each(function(index) {
@@ -256,22 +268,26 @@ $(function() {
 
   // Handle the department select options:
   $("select#owner-select").change(function() {
-    var ownerAcronym = $(this).val();
+    // var ownerAcronym = $(this).val();
     var ownerLabel = $("option:selected", this).text();
     var chartArray = $("option:selected", this).data("chartArray");
+    var urlTarget = $("option:selected", this).data("urlTarget");
 
     $(".update-owner").text(ownerLabel);
+    app.updateSourceLinks(".owner-select-link", ownerLabel, urlTarget);
 
     app.updateExistingChartArray(chartArray);
   });
 
   // Handle the vendor select options:
   $("select#vendor-select").change(function() {
-    var ownerAcronym = $(this).val();
+    // var ownerAcronym = $(this).val();
     var ownerLabel = $("option:selected", this).text();
     var chartArray = $("option:selected", this).data("chartArray");
+    var urlTarget = $("option:selected", this).data("urlTarget");
 
     $(".update-vendor").text(ownerLabel);
+    app.updateSourceLinks(".vendor-select-link", ownerLabel, urlTarget);
 
     app.updateExistingChartArray(chartArray);
   });
@@ -280,10 +296,6 @@ $(function() {
     console.log("Building " + $(this).attr("id"));
     app.buildYearStackedChart($(this).attr("id"));
   });
-
-  app.buildYearSingleChart(
-    "general-effective-overall-total-by-year-2008-to-2017"
-  );
 
   // Set initial values for the dropdown menus
   $("select#vendor-select")
@@ -294,28 +306,8 @@ $(function() {
     .val("pspc")
     .trigger("change");
 
-  var colors = [
-    "#ff0000",
-    "#ff4d00",
-    "#ff9900",
-    "#ffe600",
-    "#ccff00",
-    "#80ff00",
-    "#33ff00",
-    "#00ff19",
-    "#00ff66",
-    "#00ffb2",
-    "#00ffff",
-    "#00b3ff",
-    "#0066ff",
-    "#0019ff",
-    "#3300ff",
-    "#8000ff",
-    "#cc00ff",
-    "#ff00e5",
-    "#ff0099",
-    "#ff004c"
-  ];
+  /*
+  var colors = ["#CCCCFF", "#6633CC"];
 
   var colorMap = [];
   $.each(colors, function(index, value) {
@@ -334,4 +326,5 @@ $(function() {
     colorMap.push(item);
   });
   console.log(JSON.stringify(colorMap));
+  */
 });

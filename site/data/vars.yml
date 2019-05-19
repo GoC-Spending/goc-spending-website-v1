@@ -1,3 +1,4 @@
+typicalOverallContractSpending: "$15B"
 openGovernmentDatasetRecordModifiedDate: "2018-03-28"
 totalScrapedProactiveDisclosureDepartments: 36
 numberOfWebsitesNowOffline: 8
@@ -7,4 +8,6 @@ totalIncludedDepartments: 84
 percentCoverageOfDepartments: "77%"
 totalPolicySubjectedDepartments: 109
 vendorMatchingTableRows: 3552
-uniqueVendorNamesInCombinedDataset: "TBD"
+uniqueVendorNamesInCombinedDataset: 146211
+uniqueCleanedVendorNamesInCombinedDataset: 123029
+total2016ContractSpending: "$16.6B"

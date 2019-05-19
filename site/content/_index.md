@@ -9,7 +9,7 @@ menu:
 
 # Analyzing GoC Contract Spending
 
-This website is a volunteer-run analysis of Government of Canada contract spending. The federal government spends more than $X each year in competitive or sole-sourced contracts.
+This website is a volunteer-run analysis of Government of Canada contract spending. The federal government spends more than {{< vars typicalOverallContractSpending >}} each year in competitive or sole-sourced contracts.
 
 Since the mid-2000s, contracts larger than $10,000 have been published on each department’s [Proactive Disclosure](https://www.canada.ca/en/treasury-board-secretariat/services/reporting-government-spending/proactive-disclosure-department-agency.html) websites. Publishing contracting information is intended to improve transparency and public trust in government contracting and spending decisions.
 
@@ -21,5 +21,5 @@ In order to build a government-wide, historical dataset of Government of Canada 
 
 [sample government-wide chart here, e.g. total contract/amendment entries by fiscal quarter]
 
-The resulting dataset is the first volunteer-led, public, historical analysis of Canadian federal government contract spending at a whole-of-government level. [Learn more about the methodology and data](/methodology), [review the initial analysis and trends](/analysis), or [download the data](/download) to identify insights of your own.
+The resulting dataset is the first volunteer-led, public, historical analysis of Canadian federal government contract spending at a whole-of-government level. [Learn more about the methodology and data](/methodology/), [review the initial analysis and trends](/analysis/), or [download the data](/download/) to identify insights of your own.
 

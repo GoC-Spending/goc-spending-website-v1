@@ -59,7 +59,7 @@ As a result, neither the Open Government dataset nor the individual departmental
 
 At least {{< vars numberOfWebsitesNowOffline >}} departments have taken their proactive disclosure websites offline since 2017 when this project began. For these departments, the [scraped data collected for this project](https://github.com/GoC-Spending/goc-spending-data) is likely the only publicly-available source of this data.
 
-The Open Government dataset [can be downloaded here from open.canada.ca](https://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b). The point-in-time copy used for the aggregate trend analysis (from {{< vars openGovernmentDatasetPointInTimeDate >}}) is archived [here]. You can [download the combined dataset](/download/) to conduct further analyses on your own.
+The Open Government dataset [can be downloaded here from open.canada.ca](https://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b). The point-in-time copy used for the aggregate trend analysis (from {{< vars openGovernmentDatasetPointInTimeDate >}}) is [archived here](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/2019-03-24-contracts.zip). You can [download the combined dataset](/download/) to conduct further analyses on your own.
 
 ## Limitations and assumptions
 

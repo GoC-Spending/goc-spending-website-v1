@@ -20,17 +20,25 @@ The combined dataset exists in four different formats. Each of these can be down
 
 This table includes the raw data from both sources. It includes any duplicate or potentially erroneous entries (except any entries that could not be successfully imported into the database).
 
+- [Download source.zip](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/source.zip) (ZIP'd CSV file, 45.9 MB)
+
 ### “Source” table, with metadata
 
 This table includes the raw data above, with a range of additional metadata columns whose fields were generated from the raw data (cleaned and normalized vendor names, effective start and end years, etc.). It includes columns that flag duplicate or erroneous entries. This table is a good place to start for conducting your own analysis.
+
+- [Download source_with_metadata.zip](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/source_with_metadata.zip) (ZIP'd CSV file, 64.4 MB)
 
 ### “Clean” table
 
 This table includes the data from the “source” table, minus the duplicate and error-flagged rows. It includes the generated metadata described in the “source” table above.
 
+- [Download clean.zip](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/clean.zip) (ZIP'd CSV file, 29.0 MB)
+
 ### “By year” table
 
 This table is generated from the “clean” table, and includes separate entries for each effective year (based on the [normalizing by year](/methodology#normalizing-by-year) method). Of the downloads listed, this table is the easiest way to do year-by-year analyses, based on the methodology used here.
+
+- [Download by_year.zip](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/by_year.zip) (ZIP'd CSV file, 23.9 MB)
 
 ## Original source data
 
@@ -44,7 +52,7 @@ This repository includes data from {{< vars totalScrapedProactiveDisclosureDepar
 
 The [Proactive Disclosure of Contracts dataset](https://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b) can be downloaded from the Open Government website. It is updated on a regular basis as new departmental data is added, even though the “Record Modified” metadata indicates that it was last modified on {{< vars openGovernmentDatasetRecordModifiedDate >}}.
 
-The version of the Open Government dataset used to generate the combined dataset tables above is from {{< vars openGovernmentDatasetPointInTimeDate >}}. The [archived point-in-time version can be downloaded here].
+The version of the Open Government dataset used to generate the combined dataset tables above is from {{< vars openGovernmentDatasetPointInTimeDate >}}. The [archived point-in-time version can be downloaded here](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/2019-03-24-contracts.zip).
 
 ## Share your feedback!
 

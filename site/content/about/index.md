@@ -16,7 +16,7 @@ Over the course of two years, volunteers scraped and parsed data from department
 
 The combined dataset that resulted from this work is [publicly available](/download/), and the source code for the various scraping and analysis functions is [available on GitHub](https://github.com/GoC-Spending/). 
 
-Many people contributed time, advice, ideas, and code to this project. Special thanks to Denis, Thomas, Jason, Eric, Oliver, Lucas, Matthew, Mike, Nick, Roy, Vanessa, Stephen, Zach, Emilio, Xander, and Sean for their contributions.
+Many people contributed time, advice, ideas, and code to this project. Special thanks to Denis, Thomas, Jason, Eric, Oliver, Lucas, Matthew, Mike, Nick, Roy, Vanessa, Stephen, Ryan, Luisa, Zach, Emilio, Xander, and Sean for their contributions.
 
 This data is provided as-is, and no guarantees are made for the accuracy of the data or the processes used to aggregate and analyze it. Trends and total values should be considered estimates rather than precise values. See the [Limitations](/methodology/#limitations-and-assumptions) section for more details.
 

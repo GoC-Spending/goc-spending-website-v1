@@ -24,7 +24,7 @@ This table includes the raw data from both sources. It includes any duplicate or
 
 ### “Source” table, with metadata
 
-This table includes the raw data above, with a range of additional metadata columns whose fields were generated from the raw data (cleaned and normalized vendor names, effective start and end years, etc.). It includes columns that flag duplicate or erroneous entries. This table is a good place to start for conducting your own analysis.
+This table includes the raw data above, with a range of additional metadata columns whose fields were generated from the raw data (cleaned and normalized vendor names, effective start and end years, etc.). It includes columns that flag duplicate or erroneous entries. **This table is a good place to start for conducting your own analysis.**
 
 - [**Download source_with_metadata.zip**](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/source_with_metadata.zip) (ZIP'd CSV file, 64.4 MB)
 

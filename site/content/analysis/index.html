@@ -43,10 +43,10 @@ menu:
 <canvas id="effective-overall-total-by-year" width="400" height="200" data-chart-type="year-stacked" data-chart-options="timeStackedCurrency" data-chart-range="[2008,2009,2010,2011,2012,2013,2014,2015,2016,2017]" data-chart-values="[{&quot;label&quot;:&quot;Total value&quot;,&quot;backgroundColor&quot;:&quot;rgb(241, 185, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(194, 149, 0)&quot;,&quot;data&quot;:[&quot;6578931171.80&quot;,&quot;8732086779.51&quot;,&quot;8593308875.89&quot;,&quot;10788059872.90&quot;,&quot;10189133033.78&quot;,&quot;11408365908.27&quot;,&quot;13969681549.01&quot;,&quot;15272095645.45&quot;,&quot;16615719462.68&quot;,&quot;14485146185.46&quot;]}]"></canvas>
 
 
-<p class="text-right mb-5 ml-5">View source data: 
+<p class="text-right mb-2 ml-5">View source data: 
 <a href="https://github.com/GoC-Spending/goc-spending-analysis/blob/master/general/effective-overall-total-by-year-2008-to-2017.csv">Overall effective government-wide contract spending</a></p>
 
-<div class="alert alert-warning">
+<div class="alert alert-warning mb-5">
   <p>This chart appears to show that total contracting spending increases year over year. But this might be <a href="/methodology/#producing-aggregate-analysis-trends">due to issues with the historical data</a>, rather than an actual trend. Be careful in interpreting any year-over-year trends displayed on this page.</p>
 
   <p class="mb-0"><a href="https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data.html">Check the Purchasing Activity Reports</a> for historical whole-of-government data on contracting totals until 2016. For example, <a href="https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data/2013-purchasing-activity-report.html">the 2013 report</a> shows total spending of $14.6 billion (including contracts below our $10,000 proactive disclosure threshold).</p>
@@ -82,25 +82,161 @@ menu:
 
 <h3 id="largest-companies-by-government-wide-contract-spending">Largest companies by government-wide contract spending</h3>
 
-<p>The following charts include the top 10 companies by total effective contract value, government-wide.</p>
+<p>This table lists the largest companies by total number of contract and amendment entries in the combined dataset, from 2008 to 2017:</p>
 
-<p>This chart lists these companies by total number of contract and amendment entries, by year:</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+            <th scope="col" >Company name</th>
+            <th scope="col" >Total entries</th>
+            <th scope="col" >Total contracts</th>
+            <th scope="col" >Total amendments</th>
+          </tr>
+  </thead>
+  <tbody>
+            <tr>
+                                      <th scope="row" >CANADIAN CORPS OF COMMISSIONAIRES</th>
+                                        <td >7947</td>
+                                        <td >6636</td>
+                                        <td >1311</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >EXCEL HUMAN RESOURCES</th>
+                                        <td >5504</td>
+                                        <td >3932</td>
+                                        <td >1572</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >IMPERIAL OIL</th>
+                                        <td >5204</td>
+                                        <td >4957</td>
+                                        <td >247</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >XEROX</th>
+                                        <td >4191</td>
+                                        <td >3300</td>
+                                        <td >891</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >CANADIAN HEALTH CARE AGENCY</th>
+                                        <td >3696</td>
+                                        <td >1347</td>
+                                        <td >2349</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >STANTEC</th>
+                                        <td >3667</td>
+                                        <td >2919</td>
+                                        <td >748</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >ALTIS HUMAN RESOURCES</th>
+                                        <td >3401</td>
+                                        <td >2477</td>
+                                        <td >924</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >CALIAN</th>
+                                        <td >3134</td>
+                                        <td >2273</td>
+                                        <td >861</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >BELL CANADA</th>
+                                        <td >3070</td>
+                                        <td >2522</td>
+                                        <td >548</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >NORTHERN MICRO</th>
+                                        <td >2927</td>
+                                        <td >2803</td>
+                                        <td >124</td>
+                  </tr>
+        </tbody>
+</table>
+
+
+<p class="text-right mb-5 ml-5">View source data: 
+<a href="https://github.com/GoC-Spending/goc-spending-analysis/blob/master/general/largest-companies-by-entries-total-2008-to-2017.csv">Top 100 companies by number of contract and amendment entries</a></p>
+
+<p>This chart lists the top 10 companies by total number of contract and amendment entries, government-wide, by year:</p>
 
 <canvas id="largest-companies-by-entries-by-year" width="400" height="200" data-chart-type="year-stacked" data-chart-options="" data-chart-range="[2008,2009,2010,2011,2012,2013,2014,2015,2016,2017]" data-chart-values="[{&quot;label&quot;:&quot;ALTIS HUMAN RESOURCES&quot;,&quot;backgroundColor&quot;:&quot;rgb(241, 185, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(194, 149, 0)&quot;,&quot;data&quot;:[145,206,324,324,367,376,433,429,406,391]},{&quot;label&quot;:&quot;BELL CANADA&quot;,&quot;backgroundColor&quot;:&quot;rgb(255, 204, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(204, 163, 0)&quot;,&quot;data&quot;:[356,406,482,540,226,286,226,122,183,243]},{&quot;label&quot;:&quot;CALIAN&quot;,&quot;backgroundColor&quot;:&quot;rgb(185, 111, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(148, 89, 0)&quot;,&quot;data&quot;:[74,208,217,652,364,445,344,304,227,299]},{&quot;label&quot;:&quot;CANADIAN CORPS OF COMMISSIONAIRES&quot;,&quot;backgroundColor&quot;:&quot;rgb(116, 19, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(92, 15, 0)&quot;,&quot;data&quot;:[375,479,655,765,590,872,1003,1025,1095,1088]},{&quot;label&quot;:&quot;CANADIAN HEALTH CARE AGENCY&quot;,&quot;backgroundColor&quot;:&quot;rgb(102, 0, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(82, 0, 0)&quot;,&quot;data&quot;:[0,0,328,834,952,1034,548,0,0,0]},{&quot;label&quot;:&quot;EXCEL HUMAN RESOURCES&quot;,&quot;backgroundColor&quot;:&quot;rgb(130, 37, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(102, 29, 0)&quot;,&quot;data&quot;:[355,407,450,494,495,887,747,720,487,462]},{&quot;label&quot;:&quot;IMPERIAL OIL&quot;,&quot;backgroundColor&quot;:&quot;rgb(199, 130, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(158, 103, 0)&quot;,&quot;data&quot;:[142,316,531,435,608,921,764,650,486,351]},{&quot;label&quot;:&quot;NORTHERN MICRO&quot;,&quot;backgroundColor&quot;:&quot;rgb(172, 93, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(138, 73, 0)&quot;,&quot;data&quot;:[120,143,194,267,233,297,423,257,426,567]},{&quot;label&quot;:&quot;STANTEC&quot;,&quot;backgroundColor&quot;:&quot;rgb(227, 167, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(184, 135, 0)&quot;,&quot;data&quot;:[107,317,417,318,352,320,379,461,528,468]},{&quot;label&quot;:&quot;XEROX&quot;,&quot;backgroundColor&quot;:&quot;rgb(158, 74, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(128, 60, 0)&quot;,&quot;data&quot;:[222,334,478,490,492,516,557,482,311,309]}]"></canvas>
 
 
 <p class="text-right mb-5 ml-5">View source data: 
-<a href="https://github.com/GoC-Spending/goc-spending-analysis/blob/master/general/largest-companies-by-entries-total-2008-to-2017.csv">Top 100 companies by number of contract and amendment entries</a>, 
 <a href="https://github.com/GoC-Spending/goc-spending-analysis/blob/master/general/largest-companies-by-entries-by-year-2008-to-2017.csv">Top 10 companies by number of contract and amendment entries, by year</a></p>
+
+<p>This table lists the largest companies by total effective contract value, government-wide, from 2008 to 2017:</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+            <th scope="col" >Company name</th>
+            <th scope="col"  class="text-right" >Total effective value (2008 to 2017)</th>
+          </tr>
+  </thead>
+  <tbody>
+            <tr>
+                                      <th scope="row" >BROOKFIELD ASSET MANAGEMENT</th>
+                                        <td  class="text-right" >$ 5,747,577,902.19</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >BELL CANADA</th>
+                                        <td  class="text-right" >$ 4,560,715,043.31</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >IBM CANADA</th>
+                                        <td  class="text-right" >$ 3,599,385,732.41</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >GENERAL DYNAMICS</th>
+                                        <td  class="text-right" >$ 3,215,819,837.99</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >D H PARTNERSHIP</th>
+                                        <td  class="text-right" >$ 2,600,059,418.38</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >MACDONALD DETTWILER AND ASSOCIATES</th>
+                                        <td  class="text-right" >$ 1,964,509,630.89</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >IMP GROUP</th>
+                                        <td  class="text-right" >$ 1,901,122,178.88</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >TELUS CANADA</th>
+                                        <td  class="text-right" >$ 1,679,386,449.46</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >ROGERS</th>
+                                        <td  class="text-right" >$ 1,561,771,983.62</td>
+                  </tr>
+              <tr>
+                                      <th scope="row" >CANADIAN CORPS OF COMMISSIONAIRES</th>
+                                        <td  class="text-right" >$ 1,402,409,075.97</td>
+                  </tr>
+        </tbody>
+</table>
+
+
+<p class="text-right mb-5 ml-5">View source data: 
+<a href="https://github.com/GoC-Spending/goc-spending-analysis/blob/master/general/largest-companies-by-effective-value-total-2008-to-2017.csv">Top 100 companies by effective contract value</a></p>
 
 <p>This chart lists the top 10 companies by total effective contract value, government-wide, by year:</p>
 
 <canvas id="largest-companies-by-effective-value-by-year" width="400" height="200" data-chart-type="year-stacked" data-chart-options="timeStackedCurrency" data-chart-range="[2008,2009,2010,2011,2012,2013,2014,2015,2016,2017]" data-chart-values="[{&quot;label&quot;:&quot;BELL CANADA&quot;,&quot;backgroundColor&quot;:&quot;rgb(241, 185, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(194, 149, 0)&quot;,&quot;data&quot;:[&quot;276447515.20&quot;,&quot;272052926.78&quot;,&quot;578261429.92&quot;,&quot;618431292.33&quot;,&quot;605770863.60&quot;,&quot;552281546.18&quot;,&quot;506291276.97&quot;,&quot;460323781.06&quot;,&quot;339702989.47&quot;,&quot;351151421.81&quot;]},{&quot;label&quot;:&quot;BROOKFIELD ASSET MANAGEMENT&quot;,&quot;backgroundColor&quot;:&quot;rgb(255, 204, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(204, 163, 0)&quot;,&quot;data&quot;:[&quot;1620505.47&quot;,&quot;651122.72&quot;,&quot;2407124.93&quot;,&quot;528696.49&quot;,&quot;332920.75&quot;,&quot;155614187.95&quot;,&quot;1389217991.66&quot;,&quot;1390858752.70&quot;,&quot;1403872684.05&quot;,&quot;1402473915.48&quot;]},{&quot;label&quot;:&quot;CANADIAN CORPS OF COMMISSIONAIRES&quot;,&quot;backgroundColor&quot;:&quot;rgb(185, 111, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(148, 89, 0)&quot;,&quot;data&quot;:[&quot;56500250.37&quot;,&quot;85549882.82&quot;,&quot;101400373.58&quot;,&quot;119898428.41&quot;,&quot;123589429.67&quot;,&quot;148417782.97&quot;,&quot;174811966.53&quot;,&quot;210716243.11&quot;,&quot;182949103.99&quot;,&quot;198575614.52&quot;]},{&quot;label&quot;:&quot;D H PARTNERSHIP&quot;,&quot;backgroundColor&quot;:&quot;rgb(116, 19, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(92, 15, 0)&quot;,&quot;data&quot;:[&quot;211788321.00&quot;,&quot;211788321.00&quot;,&quot;211788321.00&quot;,&quot;211788321.00&quot;,&quot;211788321.00&quot;,&quot;211788321.00&quot;,&quot;172067847.02&quot;,&quot;172067847.02&quot;,&quot;1275750890.94&quot;,&quot;-290557092.61&quot;]},{&quot;label&quot;:&quot;GENERAL DYNAMICS&quot;,&quot;backgroundColor&quot;:&quot;rgb(102, 0, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(82, 0, 0)&quot;,&quot;data&quot;:[&quot;168220573.35&quot;,&quot;346749949.85&quot;,&quot;347889110.16&quot;,&quot;575664575.56&quot;,&quot;179077466.32&quot;,&quot;73466165.10&quot;,&quot;301363111.35&quot;,&quot;814633333.19&quot;,&quot;263895150.40&quot;,&quot;144860402.72&quot;]},{&quot;label&quot;:&quot;IBM CANADA&quot;,&quot;backgroundColor&quot;:&quot;rgb(130, 37, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(102, 29, 0)&quot;,&quot;data&quot;:[&quot;127116946.12&quot;,&quot;125674497.28&quot;,&quot;48932839.01&quot;,&quot;334469082.92&quot;,&quot;247388629.45&quot;,&quot;304271870.00&quot;,&quot;657556703.55&quot;,&quot;680308517.05&quot;,&quot;438147452.03&quot;,&quot;635519195.01&quot;]},{&quot;label&quot;:&quot;IMP GROUP&quot;,&quot;backgroundColor&quot;:&quot;rgb(199, 130, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(158, 103, 0)&quot;,&quot;data&quot;:[&quot;104528719.73&quot;,&quot;103516315.10&quot;,&quot;104681061.12&quot;,&quot;106464024.61&quot;,&quot;109139788.65&quot;,&quot;630978230.43&quot;,&quot;629192128.63&quot;,&quot;107581076.50&quot;,&quot;3803410.38&quot;,&quot;1237423.74&quot;]},{&quot;label&quot;:&quot;MACDONALD DETTWILER AND ASSOCIATES&quot;,&quot;backgroundColor&quot;:&quot;rgb(172, 93, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(138, 73, 0)&quot;,&quot;data&quot;:[&quot;169650886.31&quot;,&quot;334229107.14&quot;,&quot;57914295.38&quot;,&quot;87507881.24&quot;,&quot;81227531.73&quot;,&quot;386674423.83&quot;,&quot;125679804.92&quot;,&quot;259873786.40&quot;,&quot;240453617.44&quot;,&quot;221298296.49&quot;]},{&quot;label&quot;:&quot;ROGERS&quot;,&quot;backgroundColor&quot;:&quot;rgb(227, 167, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(184, 135, 0)&quot;,&quot;data&quot;:[&quot;17626634.43&quot;,&quot;16828451.21&quot;,&quot;225909357.48&quot;,&quot;284317295.80&quot;,&quot;142375076.18&quot;,&quot;225352622.01&quot;,&quot;257655819.58&quot;,&quot;174258309.61&quot;,&quot;89751039.18&quot;,&quot;127697378.15&quot;]},{&quot;label&quot;:&quot;TELUS CANADA&quot;,&quot;backgroundColor&quot;:&quot;rgb(158, 74, 0)&quot;,&quot;borderColor&quot;:&quot;rgb(128, 60, 0)&quot;,&quot;data&quot;:[&quot;151096726.80&quot;,&quot;156056107.61&quot;,&quot;-258472727.79&quot;,&quot;259608470.78&quot;,&quot;237629274.33&quot;,&quot;232486130.60&quot;,&quot;208478472.05&quot;,&quot;196957787.28&quot;,&quot;315313821.67&quot;,&quot;180232386.12&quot;]}]"></canvas>
 
 
-<p class="text-right mb-5 ml-5">View source data: 
-<a href="https://github.com/GoC-Spending/goc-spending-analysis/blob/master/general/largest-companies-by-effective-value-total-2008-to-2017.csv">Top 100 companies by effective contract value</a>, 
+<p class="text-right mb-2 ml-5">View source data: 
 <a href="https://github.com/GoC-Spending/goc-spending-analysis/blob/master/general/largest-companies-by-effective-value-by-year-2008-to-2017.csv">Top 10 companies by effective contract value, by year</a></p>
+
+<div class="alert alert-warning mb-5">
+  <p class="mb-0">This chart may show negative values for a given year, in cases where later amendments reduced the overall value of a large contract compared to earlier entries. See the <a href="/methodology/#normalizing-by-year">Normalizing by year</a> methodology section for more details.</p>
+</div>
 
 <h2 id="aggregate-data-by-department">Aggregate data by department</h2>
 

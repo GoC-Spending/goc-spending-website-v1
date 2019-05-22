@@ -36,7 +36,7 @@ This table includes the data from the “source” table, minus the duplicate an
 
 ### “By year” table
 
-This table is generated from the “clean” table, and includes separate entries for each effective year (based on the [normalizing by year](/methodology#normalizing-by-year) method). Of the downloads listed, this table is the easiest way to do year-by-year analyses, based on the methodology used here.
+This table is generated from the “clean” table, and includes separate entries for each effective year (based on the [normalizing by year](/methodology#normalizing-by-year) method). Of the downloads listed, **this table is the easiest way to do year-by-year analyses, based on the methodology used here**.
 
 - [**Download by_year.zip**](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/by_year.zip) (ZIP'd CSV file, 23.9 MB)
 

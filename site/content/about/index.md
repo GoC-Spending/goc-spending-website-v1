@@ -22,5 +22,5 @@ This data is provided as-is, and no guarantees are made for the accuracy of the 
 
 ## Get in touch
 
-If you have questions or feedback on this data, or if you’ve conducted your own analyses, we’d love to hear from you. You can [post a public issue on GitHub](https://github.com/GoC-Spending/GoC-Spending), or reach out by email at <gocspendinganalysis@gmail.com>.
+If you have questions or feedback on this data, or if you’ve conducted your own analyses, we’d love to hear from you. You can [post a public issue on GitHub](https://github.com/GoC-Spending/GoC-Spending/issues), or reach out by email at <gocspendinganalysis@gmail.com>.
 

@@ -97,9 +97,13 @@ For many date entries, distinguishing months and days was not possible. The year
 
 This differs, however, from Government of Canada financial systems that use an April 1 to March 31 fiscal year. As a result, comparing this data (aggregated by calendar year) to other government financial records (aggregated by fiscal year) is difficult.
 
-Up to 2016, the Treasury Board Secretariat published [Purchasing Activity Reports](https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data.html) that detailed government spending by calendar year. 
+<div class="alert alert-info" role="alert">
+  <h4>Gut checking the numbers</h4>
 
-The [2016 Purchasing Activity Report](https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data/2016-purchasing-activity-report.html) states a total of $18.2B in contract spending that year ($17B for contracts $25k and above, and $1.2B for contracts under $25k). This is comparable to {{< vars total2016ContractSpending >}} in [total 2016 contract spending](https://github.com/GoC-Spending/goc-spending-analysis/blob/master/general/effective-overall-total-by-year-2008-to-2017.csv) included in the combined dataset, which provides a useful gut-check. 
+  <p>Up to 2016, the Treasury Board Secretariat published <a href="https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data.html" target="_blank">Purchasing Activity Reports</a> that detailed government spending by calendar year.</p>
+
+  <p class="mb-0">The <a href="https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/contracting-data/2016-purchasing-activity-report.html" target="_blank">2016 Purchasing Activity Report</a> states a total of $18.2B in contract spending that year ($17B for contracts $25k and above, and $1.2B for contracts under $25k). This is comparable to <span class="variable">$16.6B</span> in <a href="https://github.com/GoC-Spending/goc-spending-analysis/blob/master/general/effective-overall-total-by-year-2008-to-2017.csv" target="_blank">total 2016 contract spending</a> included in the combined dataset, which provides a useful gut-check.</p>
+</div>
 
 ### Linearized year-to-year effective spending
 
@@ -161,7 +165,7 @@ Normalizing vendor names included two steps. Vendor names were first “cleaned�
 
 Then, vendor names were manually matched together with their “parent” company, in a large matching table. **This [vendor matching table is available as a CSV file](https://github.com/GoC-Spending/goc-spending-vendors/blob/master/vendor_data.csv) and includes {{< vars vendorMatchingTableRows >}} rows.** It includes matching entries for the largest several hundred companies in the combined dataset, based on an early aggregate analysis of the data.
 
-Because this matching was done by hand (looking up company names with similar keywords or character sequences in the database), it has a number of important limitations:
+Because this matching was done by hand (looking up company names with similar keywords or character sequences in the database), **it has a number of important limitations**:
 
 - Smaller companies are not included, and so their entries will not be associated together in aggregate analyses. 
 - Joint ventures or partnerships are listed with only one of the participating companies (chosen arbitrarily, based on whichever manual database lookup was done first). 
@@ -276,7 +280,7 @@ As the example shows, if the time range of a contract is extended (by a subseque
 
 With amendment entries grouped together and effective yearly values calculated, it’s possible to produce aggregate totals on a per-year basis across, for example, a given department, a given company, or the government as a whole.
 
-Given the [limited historical coverage](#limited-historical-data) of the data, these per-year trends become less accurate further back in time. One consequence of this is that the total effective values (e.g. total contract spending on a government-wide level) appear to increase more significantly than they do in practice, because the coverage of the data improves over time (namely, including data from more departments). For the [aggregated statistics](/analysis/) included here, a time range from 2008 to 2017 was chosen. 
+Given the [limited historical coverage](#limited-historical-data) of the data, **these per-year trends become less accurate further back in time**. One consequence of this is that the total effective values (e.g. total contract spending on a government-wide level) appear to increase more significantly than they do in practice, because the coverage of the data improves over time (namely, including data from more departments). For the [aggregated statistics](/analysis/) included here, a time range from 2008 to 2017 was chosen. 
 
 To make it easier to produce aggregate statistics, two additional database tables were created and populated from the “source” table that contained the combined dataset:
 

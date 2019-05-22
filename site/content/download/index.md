@@ -20,25 +20,25 @@ The combined dataset exists in four different formats. Each of these can be down
 
 This table includes the raw data from both sources. It includes any duplicate or potentially erroneous entries (except any entries that could not be successfully imported into the database).
 
-- [Download source.zip](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/source.zip) (ZIP'd CSV file, 45.9 MB)
+- [**Download source.zip**](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/source.zip) (ZIP'd CSV file, 45.9 MB)
 
 ### “Source” table, with metadata
 
 This table includes the raw data above, with a range of additional metadata columns whose fields were generated from the raw data (cleaned and normalized vendor names, effective start and end years, etc.). It includes columns that flag duplicate or erroneous entries. This table is a good place to start for conducting your own analysis.
 
-- [Download source_with_metadata.zip](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/source_with_metadata.zip) (ZIP'd CSV file, 64.4 MB)
+- [**Download source_with_metadata.zip**](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/source_with_metadata.zip) (ZIP'd CSV file, 64.4 MB)
 
 ### “Clean” table
 
 This table includes the data from the “source” table, minus the duplicate and error-flagged rows. It includes the generated metadata described in the “source” table above.
 
-- [Download clean.zip](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/clean.zip) (ZIP'd CSV file, 29.0 MB)
+- [**Download clean.zip**](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/clean.zip) (ZIP'd CSV file, 29.0 MB)
 
 ### “By year” table
 
 This table is generated from the “clean” table, and includes separate entries for each effective year (based on the [normalizing by year](/methodology#normalizing-by-year) method). Of the downloads listed, this table is the easiest way to do year-by-year analyses, based on the methodology used here.
 
-- [Download by_year.zip](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/by_year.zip) (ZIP'd CSV file, 23.9 MB)
+- [**Download by_year.zip**](https://s3-us-west-2.amazonaws.com/goc-spending-export-20190519/public/by_year.zip) (ZIP'd CSV file, 23.9 MB)
 
 ## Original source data
 

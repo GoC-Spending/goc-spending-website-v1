@@ -18,7 +18,9 @@ The combined dataset that resulted from this work is [publicly available](/downl
 
 Many people contributed time, advice, ideas, and code to this project. Special thanks to Denis, Thomas, Jason, Eric, Oliver, Lucas, Matthew, Mike, Nick, Roy, Vanessa, Stephen, Ryan, Luisa, Zach, Emilio, Xander, and Sean for their contributions.
 
-This data is provided as-is, and no guarantees are made for the accuracy of the data or the processes used to aggregate and analyze it. Trends and total values should be considered estimates rather than precise values. See the [Limitations](/methodology/#limitations-and-assumptions) section for more details.
+<div class="alert alert-danger">
+This data is provided as-is, and no guarantees are made for the accuracy of the data or the processes used to aggregate and analyze it. <strong>Trends and total values should be considered estimates rather than precise values.</strong> See the <a href="/methodology/#limitations-and-assumptions">Limitations</a> section for more details.
+</div>
 
 ## Get in touch
 

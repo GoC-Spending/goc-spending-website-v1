@@ -8,9 +8,16 @@ menu:
     parent: 'home'
 ---
 
-# Analyzing GoC Contract Spending
+# How much does the Government of Canada spend on procurement contracts?
+
+## Analyzing GoC Contract Spending
 
 <p class="lead">Welcome to the first <strong>volunteer-led, public, historical analysis of Canadian federal government contract spending</strong> at a whole-of-government level. <a href="/methodology/">Learn more about the methodology and data</a>, <a href="/analysis/">review the initial analysis and trends</a>, or <a href="/download/">download the data</a> to identify insights of your own.</p>
+
+<div class="alert alert-primary" role="alert">
+  <p><strong>Updated 2021-04-02:</strong></p>
+  <p><a href="/analysis/2019/" class="alert-link">See new contract data from 2010-2019 on an updated analysis page here</a>.
+</div>
 
 This is a volunteer-run analysis of Government of Canada contract spending. The federal government spends more than {{< vars typicalOverallContractSpending >}} each year in competitive or sole-sourced contracts.
 

@@ -12,6 +12,9 @@ enableInlineShortcodes = true
 
 googleAnalytics = "UA-140416206-1"
 
+[markup.goldmark.renderer]
+  unsafe= true
+
 [menu]
   [[menu.main]]
     name = "Home"

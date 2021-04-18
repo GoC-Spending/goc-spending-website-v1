@@ -31,7 +31,7 @@ googleAnalytics = "UA-140416206-1"
   [[menu.main]]
     name = "Analysis"
     identifier = "analysis"
-    url = "/analysis/"
+    url = "/analysis/2019/"
     weight = 30
 
   [[menu.main]]
